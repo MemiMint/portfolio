@@ -1,28 +1,43 @@
 import React from "react";
 import { NextPage } from "next";
-import { Container, Flex, Spacer, Box, Heading, Text, HStack, Image } from "@chakra-ui/react"
-import { MetaHead } from "../components/MetaHead"
+import { MetaHead, NavBar, Hero } from "../components";
+import { Center, Box, Heading, Text, Wrap, WrapItem, Stack } from "@chakra-ui/react";
 
 
 const Index: NextPage = (): JSX.Element => {
     return (
-        <Box>
+        <>
             <MetaHead title="Yeferson Hidalgo - Portfolio" meta={[{ name: "description", content: "Hi, my name is yeferson hidalgo and i am a full stack web developer"}]} />
-            <Box w="100vw">
-                <Flex alignItems="center" p={4} >
-                    <Image src="/logo.png" boxSize="100px" objectFit="cover" alt="logo" />
-                    <Spacer />
-                    <HStack spacing="24px" >
-                        <Text>Home</Text>
-                        <Text>About</Text>
-                        <Text>Projects</Text>
-                        <Box p={2} bg="black" borderRadius="sm" >
-                            <Text color="white" fontSize="bold">Contact Me</Text>
-                        </Box>
-                    </HStack>
-                </Flex>
+            <NavBar />
+            <Hero />
+            <Box h="40vh" bg="gray.300" p={4} >
+                <Center>
+                    <Heading as="h1" fontSize="5xl" >
+                        <Text>
+                            Personal Skills
+                        </Text>
+                    </Heading>
+                </Center>
+                <Center>
+                    <Stack mt={20}>
+                        <Wrap spacing={20} >
+                            <WrapItem>
+                                <Box w={120} h={120} bg="white" />
+                            </WrapItem>
+                            <WrapItem>
+                                <Box w={120} h={120} bg="white" />
+                            </WrapItem>
+                            <WrapItem>
+                                <Box w={120} h={120} bg="white" />
+                            </WrapItem>
+                            <WrapItem>
+                                <Box w={120} h={120} bg="white" />
+                            </WrapItem>
+                        </Wrap>
+                    </Stack>
+                </Center>
             </Box>
-        </Box>
+        </>
     )
 }
 
