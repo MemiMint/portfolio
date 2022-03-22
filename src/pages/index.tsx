@@ -1,8 +1,8 @@
 import React from "react";
 import { NextPage } from "next";
-import { MetaHead, NavBar, Hero } from "../components";
-import { Center, Box, Heading, Text, Wrap, WrapItem, Stack } from "@chakra-ui/react";
-
+import { MetaHead, NavBar, Hero, PersonalSkillSection, IconBox } from "../components";
+import { Center, Container, Box, Heading, Text, Flex, Icon, VStack, HStack } from "@chakra-ui/react";
+import { SiTypescript, SiCsharp, SiJavascript } from "react-icons/si";
 
 const Index: NextPage = (): JSX.Element => {
     return (
@@ -10,31 +10,78 @@ const Index: NextPage = (): JSX.Element => {
             <MetaHead title="Yeferson Hidalgo - Portfolio" meta={[{ name: "description", content: "Hi, my name is yeferson hidalgo and i am a full stack web developer"}]} />
             <NavBar />
             <Hero />
-            <Box h="40vh" bg="gray.300" p={4} >
+            <PersonalSkillSection />
+            <Box p={12}>
                 <Center>
-                    <Heading as="h1" fontSize="5xl" >
+                    <Heading>
                         <Text>
-                            Personal Skills
+                            Programming Language
                         </Text>
                     </Heading>
                 </Center>
                 <Center>
-                    <Stack mt={20}>
-                        <Wrap spacing={20} >
-                            <WrapItem>
-                                <Box w={120} h={120} bg="white" />
-                            </WrapItem>
-                            <WrapItem>
-                                <Box w={120} h={120} bg="white" />
-                            </WrapItem>
-                            <WrapItem>
-                                <Box w={120} h={120} bg="white" />
-                            </WrapItem>
-                            <WrapItem>
-                                <Box w={120} h={120} bg="white" />
-                            </WrapItem>
-                        </Wrap>
-                    </Stack>
+                    <HStack spacing={10} >
+                        <Box
+                            w="36"
+                            h="36"
+                            bg="green"
+                            borderRadius="md"
+                            boxShadow="md"
+                            _hover={{
+                                backgroundColor: "#007acc",
+                                color: "white"
+                            }}
+                        >
+                            <Center my={6} >
+                                <Icon as={SiTypescript} w="14" h="14" />
+                            </Center>
+                            <Center>
+                                <Text fontWeight="medium" >
+                                    Typescript
+                                </Text>
+                            </Center>
+                        </Box>
+                        <Box
+                            w="36"
+                            h="36"
+                            bg="green"
+                            borderRadius="md"
+                            boxShadow="md"
+                            _hover={{
+                                backgroundColor: "#007acc",
+                                color: "white"
+                            }}
+                        >
+                            <Center my={6} >
+                                <Icon as={SiCsharp} w="14" h="14" />
+                            </Center>
+                            <Center>
+                                <Text fontWeight="medium" >
+                                    Typescript
+                                </Text>
+                            </Center>
+                        </Box>
+                        <Box
+                            w="36"
+                            h="36"
+                            bg="green"
+                            borderRadius="md"
+                            boxShadow="md"
+                            _hover={{
+                                backgroundColor: "#007acc",
+                                color: "white"
+                            }}
+                        >
+                            <Center my={6} >
+                                <Icon as={SiJavascript} w="14" h="14" />
+                            </Center>
+                            <Center>
+                                <Text fontWeight="medium" >
+                                    Javascript
+                                </Text>
+                            </Center>
+                        </Box>
+                    </HStack>
                 </Center>
             </Box>
         </>
