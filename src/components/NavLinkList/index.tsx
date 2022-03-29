@@ -1,11 +1,12 @@
 import React, { FC } from "react";
-import { HStack } from "@chakra-ui/react"
+import { HStack, Icon } from "@chakra-ui/react";
 import { NavBarLink } from "../NavbarLink";
 import { links } from "./links";
+import { AiOutlineMenu } from "react-icons/ai"
 
 export const NavBarLinkList: FC = (): JSX.Element => {
     return (
-        <HStack spacing="10" >
+        <HStack display={{ base: "none", sm: "none", md: "none", lg: "block" }} spacing="10" >
             {
                 links.map((link, index): JSX.Element => {
                     return (

@@ -5,10 +5,10 @@ import { IProps } from "./IProps";
 export const SkillDescription: FC<IProps> = (props): JSX.Element => {
     return (
         <Box>
-            <Heading as="h4" mb={4} >
+            <Heading as="h4" mb={4} color="white" fontSize={{ base: "18px", lg:"28px" }}>
                 {props.header}
             </Heading>
-            <Text>
+            <Text color="white" fontSize={{base: "14px", lg: "18"}} >
                 {props.description}
             </Text>
         </Box>

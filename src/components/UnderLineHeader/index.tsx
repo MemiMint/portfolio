@@ -7,7 +7,7 @@ export const UnderlineHeader: FC<IProps> = (props): JSX.Element => {
         <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '4xl', sm: "2xl", md: '4xl', lg: '6xl' }}>
+            fontSize={{ base: '4xl', sm: "2xl", md: "6xl", lg: "6xl" }}>
             <Text
                 as={'span'}
                 position={'relative'}

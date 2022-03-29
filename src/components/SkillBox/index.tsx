@@ -7,7 +7,7 @@ import { IProps } from "./IProps"
 export const SkillBox: FC<IProps> = (props): JSX.Element => {
     const NormalFlow = () => {
         return (
-            <HStack m="16" spacing={10}>
+            <HStack my="16" spacing={10}>
                 <IconBox icon={props.icon} />
                 <SkillDescription
                     header={props.title}
@@ -19,7 +19,7 @@ export const SkillBox: FC<IProps> = (props): JSX.Element => {
 
     const ReverseFlow = () => {
         return (
-            <HStack m="16" spacing={10}>
+            <HStack my="16" spacing={10}>
                 <SkillDescription
                     header={props.title}
                     description={props.description}

@@ -7,7 +7,7 @@ export const BackgroundHeader: FC<IProps> = (props): JSX.Element => {
         <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '4xl', sm: "1xl", md: '2xl', lg: '4xl' }}
+            fontSize={{ base: '2xl', sm: "1xl", md: '2xl', lg: '4xl' }}
         >
             <Text as={'span'} p={2} color={'white'} bg="black" >
                 {props.text}
