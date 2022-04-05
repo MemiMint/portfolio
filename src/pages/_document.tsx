@@ -12,7 +12,7 @@ class AppDocument extends NextDocument {
 
     render(): ReactElement {
         return (
-            <Html lang="en">
+            <Html lang="en" style={{scrollBehavior: "smooth"}} >
                 <Head>
                     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

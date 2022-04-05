@@ -1,24 +1,39 @@
-import { IProps as INavLink } from "../NavbarLink/IProps";
+import { IProps as INavLink } from "../Links/NavbarLink/IProps";
 
 export const links: Array<INavLink> = [
     {
         text: "Home",
-        href: "/",
+        href: "#",
+        hasBackground: false
+    },
+    {
+        text: "Personal Skills",
+        href: "#personal-skill",
+        hasBackground: false
+    },
+    {
+        text: "Tech Stack",
+        href: "#tech-stack",
         hasBackground: false
     },
     {
         text: "Projects",
-        href: "/",
+        href: "#projects",
         hasBackground: false
     },
     {
         text: "About Me",
-        href: "/",
+        href: "#about-me",
+        hasBackground: false
+    },
+    {
+        text: "Certificates",
+        href: "#certificates",
         hasBackground: false
     },
     {
         text: "Contact Me",
-        href: "/",
+        href: "#contact-me",
         hasBackground: true
     },
 ]

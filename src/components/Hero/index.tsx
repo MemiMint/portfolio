@@ -6,7 +6,7 @@ import { BackgroundHeader } from "../BackgroundHeader";
 
 export const Hero: FC = (): JSX.Element => {
     return (
-        <Container maxW={'7xl'} mb={8} >
+        <Container id="hero" maxW={'7xl'} mb={8} >
             <Stack
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}

@@ -7,6 +7,7 @@ export const FormTextArea: FC<IProps> = (props): JSX.Element => {
         <FormControl id="name">
             <FormLabel>Message</FormLabel>
             <Textarea
+                name={props.name}
                 borderColor="gray.300"
                 _hover={{
                     borderRadius: 'gray.300',

@@ -3,7 +3,7 @@ import { Box, Flex, Spacer, Icon, useDisclosure } from "@chakra-ui/react";
 import { Logo } from "../Logo";
 import { NavBarLinkList } from "../NavLinkList"
 import { AiOutlineMenu } from "react-icons/ai"
-import { SideBar } from "../Sidebar";
+import { SideBar } from "../Sidebar/HomeSideBar";
 
 /* Webpage Navbar */
 export const NavBar: FC = (): JSX.Element => {
@@ -16,7 +16,7 @@ export const NavBar: FC = (): JSX.Element => {
                     <Logo />
                     <Spacer />
                     <NavBarLinkList />
-                    <Icon display={{ base: "block", sm: "block", md: "none", lg: "none" }} as={AiOutlineMenu} w={6} h={6} mr={3} onClick={onOpen} />
+                    <Icon cursor="pointer" display={{ base: "block", sm: "block", md: "none", lg: "none" }} as={AiOutlineMenu} w={6} h={6} mr={3} onClick={onOpen} />
                 </Flex>
             </Box>
             <SideBar isOpen={isOpen} onClose={onClose} />
