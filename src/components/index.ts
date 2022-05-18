@@ -1,23 +1,29 @@
 import { NavBar } from "./NavBar";
 import { MetaHead } from "./MetaHead";
 import { Hero } from "./Hero";
-import { PersonalSkillSection } from "./PersonalSkillSection"
-import { ProgrammingLanguageSection } from "./ProgrammingLanguageSection";
-import { FrameworkSection } from "./FrameworkSection";
-import { DatabaseSection } from "./DatabasesSection";
-import { ProjectSection } from "./ProjectSection"
-import { AboutMe } from "./AboutMe";
+import { PersonalSkillSection } from "./PersonalSkillSection";
+import { TechStackSection } from "./TechStackSection";
+import { ProjectSection } from "./ProjectSection";
+import { AboutMeSection } from "./AboutMeSection";
 import { ContactMeSection } from "./ContactMeSection";
+import { TechTag } from "./TechTag";
+import { ProjectBody } from "./ProjectBody";
+import { ProjectAside } from "./ProjectAside";
+import { ProjectSidebar } from "./Sidebar/ProjectSidebar";
+import { CertificateSection } from "./CertificateSection";
 
 export {
     MetaHead,
     NavBar,
     Hero,
     PersonalSkillSection,
-    ProgrammingLanguageSection,
-    FrameworkSection,
-    DatabaseSection,
+    TechStackSection,
     ProjectSection,
-    AboutMe,
+    AboutMeSection,
     ContactMeSection,
+    TechTag,
+    ProjectBody,
+    ProjectAside,
+    ProjectSidebar,
+    CertificateSection
 };

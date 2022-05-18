@@ -1,8 +1,13 @@
 import React from "react";
 import { NextPage } from "next";
+<<<<<<< HEAD
 import { Box, CircularProgress } from "@chakra-ui/react"
 import { useAppContext } from "../context"
 import { MetaHead, NavBar, Hero, PersonalSkillSection, ProgrammingLanguageSection, FrameworkSection, DatabaseSection, ProjectSection, AboutMe, ContactMeSection } from "../components";
+=======
+import { Box } from "@chakra-ui/react"
+import { MetaHead, NavBar, Hero, PersonalSkillSection, TechStackSection, ProjectSection, AboutMeSection, ContactMeSection, CertificateSection } from "../components";
+>>>>>>> 1c2ab9ce3aeb44c313338773cea1bdd60f431439
 
 
 const Index: NextPage = (): JSX.Element => {
@@ -12,11 +17,10 @@ const Index: NextPage = (): JSX.Element => {
             <NavBar />
             <Hero />
             <PersonalSkillSection />
-            <ProgrammingLanguageSection />
-            <FrameworkSection />
-            <DatabaseSection />
+            <TechStackSection />
             <ProjectSection />
-            <AboutMe />
+            <AboutMeSection />
+            <CertificateSection />
             <ContactMeSection />
         </Box>
     )

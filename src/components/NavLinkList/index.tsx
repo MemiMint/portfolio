@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { HStack, Icon } from "@chakra-ui/react";
-import { NavBarLink } from "../NavbarLink";
+import { NavBarLink } from "../Links/NavbarLink";
 import { links } from "./links";
 import { AiOutlineMenu } from "react-icons/ai"
 

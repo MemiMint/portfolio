@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { FormControl, Button, useToast } from "@chakra-ui/react";
+import { IProps } from "./IProps"
 
-export const FormButton: FC = (): JSX.Element => {
+export const FormButton: FC<IProps> = (props): JSX.Element => {
     const toast = useToast();
 
     return (
@@ -11,14 +12,7 @@ export const FormButton: FC = (): JSX.Element => {
                 bg="#0D74FF"
                 color="white"
                 _hover={{}}
-                onClick={() => {
-                    toast({
-                        title: "Your email has been sent!",
-                        status: "success",
-                        duration: 2000,
-                        position: "top-right"
-                    })
-                }}
+                onClick={props.onClick}
             >
                 Send Message
             </Button>

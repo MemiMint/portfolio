@@ -1,9 +1,11 @@
 import React, { FC } from "react";
-import { Box, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Spacer, HStack, Icon } from "@chakra-ui/react";
 import { UserProfile } from "../UserProfile";
 import { Resume } from "../Resume";
 import { FlagVE } from "../FlagVe";
 import { Blob } from "../Blob";
+import { IconLink } from "../Links/IconLink";
+import { SiGithub, SiLinkedin } from "react-icons/si"
 
 const RESUME = `
 Fullstack web developer specialized mostly in frontend with modern technologies
@@ -33,7 +35,6 @@ export const UserProfileCard: FC = (): JSX.Element => {
                 position={'relative'}
                 bg="white"
                 maxW={"700px"}
-                height={'300px'}
                 rounded={'2xl'}
                 boxShadow={'2xl'}
                 width={'full'}
@@ -46,6 +47,12 @@ export const UserProfileCard: FC = (): JSX.Element => {
                     <FlagVE />
                 </Flex>
                 <Resume text={RESUME} />
+                <Flex mt={{base: 5, sm: 5, md: 10, lg: 10}} justifyContent="flex-end" px={6} >
+                    <HStack spacing={4} >
+                        <IconLink icon={SiGithub} tooltip="Github" href="/"  text="" />
+                        <IconLink icon={SiLinkedin} tooltip="Linkedin" color="#0077b5" href="/" text="" />
+                    </HStack>
+                </Flex>
             </Box>
     </Flex>
     )

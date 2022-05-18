@@ -3,12 +3,12 @@ import { Box, Container, Flex, Wrap } from "@chakra-ui/react";
 
 export const ContactMeContainer: FC = (props): JSX.Element => {
     return (
-        <Container as="section" bg="white" maxW="full" mt={0} centerContent overflow="hidden"  >
-            <Flex>
+        <Container id="contact-me" as="section" bg="white" maxW="full" mt={0} centerContent overflow="hidden"  >
+            <Flex my={10} >
                 <Box
                     bg="black"
                     color="white"
-                    borderRadius="lg"
+                    borderRadius={{base: "inherit", sm: "inherit", lg: "md"}}
                     m={{ sm: 4, md: 16, lg: 10 }}
                     p={{ sm: 5, md: 5, lg: 16 }}
                 >
