@@ -1,14 +1,19 @@
 import React, { FC } from "react";
-import { Box, Stack } from "@chakra-ui/react"
+import { useAppContext } from "../../context";
+import { Box } from "@chakra-ui/react";
 import { CenterHeader } from "../CenterHeader";
-import { Carrousel } from "../Carrousel"
-import { ProjectCard } from "../ProjectCard";
+import { ProjectList } from "../ProjectList";
+import { Loading } from "../Loading";
 
 export const ProjectSection: FC = (): JSX.Element => {
-    return (
-        <Box as="section" bg="gray.300" p={{ base: 2, lg: 8 }} >
-            <CenterHeader color="black" text="Projects" />
-            <Carrousel />
-        </Box>
-    )
-}
+  const { state } = useAppContext();
+
+  return (
+    <Box pos="relative" as="section" bg="gray.300" p={{ base: 2, lg: 8 }}>
+      { !state.isLoading && <Loading /> }
+      <CenterHeader color="black" text="Projects" />
+      <ProjectList />
+    </Box>
+  );
+};
+

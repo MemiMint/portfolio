@@ -1,0 +1,16 @@
+import React, { FC } from "react";
+import { Box, Flex, Spinner } from "@chakra-ui/react";
+
+export const Loading: FC = (): JSX.Element => {
+    return (
+        <Flex align="center" justify="center" pos="absolute" top={0} left={0} w="100%" h="100%" bg="red.300">
+            <Spinner
+                thickness='4px'
+                speed='0.65s'
+                emptyColor='gray.200'
+                color='blue.500'
+                size='xl'
+            />
+        </Flex>
+    )
+}
