@@ -17,51 +17,7 @@ export const ProjectCard: FC<IProps> = ({ thumbnail, title, description, tags })
   return (
     <LinkWrapper href="/project/412412" >
       <Center py={6}>
-        <Box
-<<<<<<< HEAD
-          h={'210px'}
-          bg={'gray.100'}
-          mt={-6}
-          mx={-6}
-          mb={6}
-          pos={'relative'}>
-          <Image
-            loader={({ src }) => src}
-            src={thumbnail}
-            layout={'fill'}
-          />
-        </Box>
-        <Stack>
-          <HStack spacing={4} >
-            {
-              tags.map((tag) => {
-                return (
-                  <TechTag icon={SiTypescript} label={tag} />
-                );
-              })
-            }
-          </HStack>
-          <Heading
-            color="gray.700"
-            fontSize={{ base: "large", sm: "medium", lg: "2xl" }}
-            fontFamily={'body'}
-          >
-            { title }
-          </Heading>
-          <Text color={'gray.500'} noOfLines={2} >
-            { description }
-          </Text>
-        </Stack>
-      </Box>
-    </Center>
-=======
-          maxW={{ base: "345px", lg: "445px" }}
-          w={'full'}
-          bg={"white"}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          p={6}
-          overflow={'hidden'}>
+        <Box>
           <Box
             h={'210px'}
             bg={'gray.100'}
@@ -71,35 +27,33 @@ export const ProjectCard: FC<IProps> = ({ thumbnail, title, description, tags })
             pos={'relative'}>
             <Image
               loader={({ src }) => src}
-              src={
-                'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-              }
+              src={thumbnail}
               layout={'fill'}
             />
           </Box>
           <Stack>
             <HStack spacing={4} >
-              <TechTag icon={SiTypescript} label="Typescript" />
-              <TechTag icon={SiNodedotjs} label="NodeJS" />
-              <TechTag icon={SiExpress} label="Express" />
-              <TechTag icon={SiMongodb} label="MongoDB" />
+              {
+                tags.map((tag) => {
+                  return (
+                    <TechTag icon={SiTypescript} label={tag} />
+                  );
+                })
+              }
             </HStack>
             <Heading
               color="gray.700"
               fontSize={{ base: "large", sm: "medium", lg: "2xl" }}
-              fontFamily={'body'}>
-              Boost your conversion rate
+              fontFamily={'body'}
+            >
+              {title}
             </Heading>
             <Text color={'gray.500'} noOfLines={2} >
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-              et ea rebum.
+              {description}
             </Text>
           </Stack>
         </Box>
       </Center>
     </LinkWrapper>
->>>>>>> 1c2ab9ce3aeb44c313338773cea1bdd60f431439
   );
 }

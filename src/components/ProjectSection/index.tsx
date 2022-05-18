@@ -10,7 +10,7 @@ export const ProjectSection: FC = (): JSX.Element => {
 
   return (
     <Box pos="relative" as="section" bg="gray.300" p={{ base: 2, lg: 8 }}>
-      { !state.isLoading && <Loading /> }
+      { state.isLoading && <Loading /> }
       <CenterHeader color="black" text="Projects" />
       <ProjectList />
     </Box>
