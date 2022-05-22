@@ -1,18 +1,24 @@
 import React, { FC } from "react";
+import { useAppContext } from "../../context";
 import { WrapItem, VStack, Box } from "@chakra-ui/react"
 import { FormInput } from "../FormInput"
 import { FormButton } from "../FormButton"
 import { FormTextArea } from "../FormTextArea";
+import { Loading } from "../Loading";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from 'react-icons/bs';
 import { useContactForm } from "./hook";
 
 export const ContactForm: FC = (): JSX.Element => {
-    const { state, onChange, onFocus, onClick } = useContactForm()
+    const { state, onChange, onFocus, onClick } = useContactForm();
+    const context = useAppContext();
+
+    const { isLoading } = context.state;
 
     return (
         <WrapItem>
-            <Box bg="white" borderRadius="md" boxShadow="md" >
+            <Box pos="relative" bg="white" borderRadius="md" boxShadow="md" >
+                { isLoading && <Loading  /> }
                 <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                         <FormInput name="name" value={state.name} label="Your name" icon={BsPerson} error={state.error} onFocus={onFocus} onChange={onChange} />

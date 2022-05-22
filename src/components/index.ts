@@ -6,7 +6,6 @@ import { TechStackSection } from "./TechStackSection";
 import { ProjectSection } from "./ProjectSection";
 import { AboutMeSection } from "./AboutMeSection";
 import { ContactMeSection } from "./ContactMeSection";
-import { TechTag } from "./TechTag";
 import { ProjectBody } from "./ProjectBody";
 import { ProjectAside } from "./ProjectAside";
 import { ProjectSidebar } from "./Sidebar/ProjectSidebar";
@@ -21,7 +20,6 @@ export {
     ProjectSection,
     AboutMeSection,
     ContactMeSection,
-    TechTag,
     ProjectBody,
     ProjectAside,
     ProjectSidebar,

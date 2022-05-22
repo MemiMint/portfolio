@@ -20,7 +20,9 @@ export const AppProvider: FC = ({ children }): JSX.Element => {
 
         await service.GetProjects().then((projects) => {
             dispatch({ type: "GET_PROJECTS", payload: projects });
-        });
+        }).catch(() => {
+            dispatch({ type: "GET_PROJECTS", payload: [] });
+        })
     }
 
     useEffect(() => {

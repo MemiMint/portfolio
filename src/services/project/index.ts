@@ -3,10 +3,10 @@ import { IProject, IProjectService } from "../../types";
 export class ProjectService implements IProjectService {
 
     public GetProjects = async (): Promise<IProject[]> => {
-        const response: Response = await fetch("http://localhost:4000/projects", {
+        const response: Response = await fetch("https://yeferson-portfolio-api.herokuapp.com/projects", {
             method: "GET",
             headers: {
-                "content-type": "application/json"
+                "Content-Type": "application/json"
             }
         });
 
@@ -16,10 +16,10 @@ export class ProjectService implements IProjectService {
     }
 
     public GetProject = async (id: string): Promise<IProject> => {
-        const response: Response = await fetch(`http://localhost:4000/project/${id}`, {
+        const response: Response = await fetch(`https://yeferson-portfolio-api.herokuapp.com/project/${id}`, {
             method: "GET",
             headers: {
-                "content-type": "application/json"
+                "Content-Type": "application/json"
             }
         });
 

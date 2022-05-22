@@ -1,32 +1,18 @@
 import React, { FC } from "react";
-import { Box, Heading, Image, Wrap, WrapItem, Center } from "@chakra-ui/react";
+import { Box, SimpleGrid, Heading, Wrap, Image, WrapItem, Center } from "@chakra-ui/react";
+import { ProjectImage } from "../ProjectImage";
+import { IProps } from "./IProps"
 
-export const ProjectGallery: FC = (): JSX.Element => {
+export const ProjectGallery: FC<IProps> = (props): JSX.Element => {
     return (
-        <Box mt={12} >
-            <Heading fontSize="28px" letterSpacing={0.8} >
-                Gallery
-            </Heading>
-            <Wrap mt={10} spacing={6} >
-                <WrapItem>
-                    <Image w="64" h="64" src="/me.jpg" />
-                </WrapItem>
-                <WrapItem>
-                    <Image w="64" h="64" src="/me.jpg" />
-                </WrapItem>
-                <WrapItem>
-                    <Image _hover={{
-                        border: "2px solid",
-                        borderColor: "blue"
-                    }} w="64" h="64" src="/me.jpg" />
-                </WrapItem>
-                <WrapItem>
-                    <Image w="64" h="64" src="/me.jpg" />
-                </WrapItem>
-                <WrapItem>
-                    <Image w="64" h="64" src="/me.jpg" />
-                </WrapItem>
-            </Wrap>
-        </Box>
+        <SimpleGrid my={10} columns={4} spacing="40px" >
+            {
+                props.gallery.map((image, index): JSX.Element => {
+                    return (
+                        <ProjectImage image={image} key={index} />
+                    );
+                })
+            }
+        </SimpleGrid>
     )
 }

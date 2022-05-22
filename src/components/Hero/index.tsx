@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container, Stack, Center } from "@chakra-ui/react";
+import { Container, Stack } from "@chakra-ui/react";
 import { UserProfileCard } from "../UserProfileCard";
 import { UnderlineHeader } from "../UnderLineHeader";
 import { BackgroundHeader } from "../BackgroundHeader";

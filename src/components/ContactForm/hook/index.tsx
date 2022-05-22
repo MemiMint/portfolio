@@ -1,13 +1,22 @@
 import React, { useCallback, useState } from "react";
+import { useToast } from "@chakra-ui/react"
+import { MailerService } from "../../../services";
+import { useAppContext } from "../../../context"
+import { IEmail } from "../../../types";
 import { IState } from "./IState";
 
 export const useContactForm = () => {
+    const service: MailerService = new MailerService();
+    const toast = useToast()
+
     const [state, setState] = useState<IState>({
         name: "",
         email: "",
         message: "",
-        error: false
+        error: false,
     });
+
+    const { dispatch } = useAppContext();
 
     const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         const { name, value } = e.target;
@@ -25,11 +34,32 @@ export const useContactForm = () => {
         })
     }, [state]);
 
-    const onClick = useCallback(() => {
-        setState({
-            ...state,
-            error: !state.error
+    const onClick = useCallback(async () => {
+        const data: IEmail = {
+            email: state.email,
+            name: state.name,
+            message: state.message 
+        }
+
+        dispatch({ type: "REQUEST" });
+
+        await service.SendEmail(data).then((message) => {
+            toast({
+                title: message,
+                status: "success",
+                duration: 5000,
+                isClosable: true
+            });
+        }).catch((error) => {
+            toast({
+                title: error.message,
+                status: "error",
+                duration: 5000,
+                isClosable: true
+            });
         });
+
+        dispatch({ type: "DONE" });
     }, [state])
 
     return { state, onFocus, onChange, onClick };

@@ -1,5 +1,7 @@
 import React, { FC } from "react"
 import Image from 'next/image';
+import Link from "next/link";
+import { useRouter } from "next/router"
 import {
   Box,
   Center,
@@ -9,15 +11,23 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { TechTag } from "../TechTag";
-import { LinkWrapper } from "../Links/LinkWrapper"
 import { SiTypescript, SiNodedotjs, SiExpress, SiMongodb } from "react-icons/si";
+import { LinkWrapper } from "../Links/LinkWrapper"
 import { IProps } from "./IProps";
 
-export const ProjectCard: FC<IProps> = ({ thumbnail, title, description, tags }) => {
+export const ProjectCard: FC<IProps> = ({ id, thumbnail, title, description, tags }) => {
   return (
-    <LinkWrapper href="/project/412412" >
+    <LinkWrapper href={`/project/${id}`}>
       <Center py={6}>
-        <Box>
+        <Box
+          maxW={'445px'}
+          w={'full'}
+          bg={"white"}
+          boxShadow={'2xl'}
+          rounded={'md'}
+          p={6}
+          overflow={'hidden'}>
+
           <Box
             h={'210px'}
             bg={'gray.100'}
@@ -27,7 +37,7 @@ export const ProjectCard: FC<IProps> = ({ thumbnail, title, description, tags })
             pos={'relative'}>
             <Image
               loader={({ src }) => src}
-              src={thumbnail}
+              src={`https://yeferson-portfolio-api.herokuapp.com/uploads/${thumbnail}`}
               layout={'fill'}
             />
           </Box>

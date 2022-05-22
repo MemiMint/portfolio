@@ -11,7 +11,7 @@ export const ProjectList: FC = (props): JSX.Element => {
       {
         state.projects.map((project): JSX.Element => {
           return (
-            <ProjectCard thumbnail={project.gallery[0]} title={project.title} description={project.description} tags={project.tags} />
+            <ProjectCard id={project._id} thumbnail={project.gallery[0]} title={project.title} description={project.description} tags={project.tags} />
           )
         })
       }

@@ -8,6 +8,7 @@ export const TechBox: FC<IProps> = (props): JSX.Element => {
     <TechPopOver header={props.text} data={props.skills}>
       <Box
         maxW="32"
+        w="32"
         h="32"
         bg={props.backgroundColor}
         borderRadius="md"

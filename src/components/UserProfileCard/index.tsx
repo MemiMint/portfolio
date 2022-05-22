@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Flex, Spacer, HStack, Icon } from "@chakra-ui/react";
+import { Box, Flex, Spacer, HStack  } from "@chakra-ui/react";
 import { UserProfile } from "../UserProfile";
 import { Resume } from "../Resume";
 import { FlagVE } from "../FlagVe";
@@ -49,8 +49,8 @@ export const UserProfileCard: FC = (): JSX.Element => {
                 <Resume text={RESUME} />
                 <Flex mt={{base: 5, sm: 5, md: 10, lg: 10}} justifyContent="flex-end" px={6} >
                     <HStack spacing={4} >
-                        <IconLink icon={SiGithub} tooltip="Github" href="/"  text="" />
-                        <IconLink icon={SiLinkedin} tooltip="Linkedin" color="#0077b5" href="/" text="" />
+                        <IconLink icon={SiGithub} tooltip="Github" href="https://github.com/MemiMint"  text="" />
+                        <IconLink icon={SiLinkedin} tooltip="Linkedin" color="#0077b5" href="https://www.linkedin.com/in/yeferson-moises-hidalgo-quintana-69158a236/" text="" />
                     </HStack>
                 </Flex>
             </Box>

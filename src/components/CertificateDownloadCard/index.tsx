@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Image, Center, Text, Flex, Link, Icon, HStack } from "@chakra-ui/react";
+import { Box, Image, Center, Text, Flex, Link, Icon } from "@chakra-ui/react";
 import { AiOutlineDownload } from "react-icons/ai"
 import { IProps } from "./IProps";
 
@@ -7,7 +7,7 @@ export const CertificateDownloadCard: FC<IProps> = (props): JSX.Element => {
     return (
         <Center>
             <Box
-                maxW={{ base: "345px", lg: "445px" }}
+                maxW={{ base: "345px", md: "345px", lg: "445px" }}
                 w={'full'}
                 bg={"white"}
                 boxShadow={'2xl'}

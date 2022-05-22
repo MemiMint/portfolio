@@ -1,5 +1,5 @@
 import { IProps as TechBoxProps } from "../TechBox/IProps";
-import {SiReact, SiGraphql, SiFirebase, SiDotnet, SiNextdotjs, SiRedux, SiExpress, SiChakraui, SiTailwindcss } from "react-icons/si"
+import {SiReact, SiVuedotjs, SiAngular,SiGraphql, SiFirebase, SiDotnet, SiNextdotjs, SiRedux, SiExpress, SiChakraui, SiTailwindcss } from "react-icons/si"
 import { DiNodejs, } from "react-icons/di";
 
 export const techStack: Array<TechBoxProps> = [
@@ -9,6 +9,20 @@ export const techStack: Array<TechBoxProps> = [
         icon: SiReact,
         text: "ReactJS",
         skills: ["How React DOM works", "Function components", "State management", "React Context", "Built-in hooks", "Custom hooks", "Lifecycle Component", "Composition", "Navigation", "Conditional Rendering", "Handling Events"]
+    },
+    {
+        backgroundColor: "#dd1b16",
+        color: "white",
+        icon: SiAngular,
+        text: "Angular",
+        skills: ["Angular 11", "Angular CLI", "Angular Directives", "HTTP Client", "RxJS", "Routing and Navigation", "Forms", "State Management", "Event Emitter"]
+    },
+    {
+        backgroundColor: "#41B883",
+        color: "#34495E",
+        icon: SiVuedotjs,
+        text: "Vue",
+        skills: ["vue-cli","State Management", "Routing", "State and Props", "Built-in Directives", "Template Syntax"]
     },
     {
         backgroundColor: "#66cc33",

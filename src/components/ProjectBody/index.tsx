@@ -13,7 +13,7 @@ export const ProjectBody: FC<IProps> = (props): JSX.Element => {
                     {props.body}
                 </Text>
             </Container>
-            <ProjectGallery  />
+            <ProjectGallery gallery={props.gallery} />
         </Container>
     )
 }

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Container, Center, Text, Image, Stack } from "@chakra-ui/react";
+import { Box, Center, Text } from "@chakra-ui/react";
 import { CenterHeader } from "../CenterHeader";
 
 const text = `

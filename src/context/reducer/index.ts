@@ -16,5 +16,12 @@ export const appReducer = (state: IState, action: Action): IState => {
                 isLoading: false
             }
         }
+
+        case "DONE": {
+            return {
+                ...state,
+                isLoading: false
+            }
+        }
     }
 }
